@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 router.get("/services", middle.apiKeyMiddleware, database.getData);
 
-router.get("/api/services/", middle.apiKeyMiddleware, supeData.fetchData);
+router.get("/api/services/", middle.apiKeyMiddleware, supeData.fetchDataNearToFar);
 
 module.exports = {
     router,
