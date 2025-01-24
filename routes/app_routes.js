@@ -5,7 +5,7 @@ const middle = require("../middleware/api_key");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.json({ message: "Welcome to..." });
+    res.json({ message: "Welcome to my project..." });
 });
 
 router.get("/services", middle.apiKeyMiddleware, database.getData);
